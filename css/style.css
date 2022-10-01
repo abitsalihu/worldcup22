@@ -16,8 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  border: 1px solid red; }
+  overflow: hidden; }
 
 img,
 picture,
@@ -45,3 +44,65 @@ h6 {
 #root,
 #__next {
   isolation: isolate; }
+
+.con {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cec1b0;
+  background: #393e46; }
+  .con__card {
+    width: 800px;
+    height: 400px;
+    background: #5c928f;
+    background: linear-gradient(3deg, #5c928f 0%, #cec1b0 94%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: visible; }
+    .con__card-cup {
+      margin-top: -150px;
+      width: 300px;
+      position: relative;
+      display: none; }
+    .con__card-player {
+      position: absolute; }
+      .con__card-player--messi {
+        width: 400px;
+        bottom: 0;
+        right: 150px; }
+      .con__card-player--ronaldo {
+        width: 600px;
+        bottom: -185px;
+        left: 10px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%); }
+      .con__card-player--maradona {
+        width: 130px;
+        top: 30px; }
+      .con__card-player--neymar {
+        width: 350px;
+        bottom: -197px;
+        right: -100px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%); }
+      .con__card-player--mbappe {
+        width: 450px;
+        left: -100px;
+        bottom: 0; }
+      .con__card-player--kane {
+        width: 325px;
+        bottom: 0px;
+        right: 40px; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: #5c928f;
+  background: linear-gradient(3deg, #5c928f 0%, transparent);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid red;
+  overflow-y: hidden; }
