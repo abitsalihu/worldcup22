@@ -1,0 +1,22 @@
+{
+  "name": "q",
+  "version": "1.0.0",
+  "description": "abi",
+  "main": "script.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abitsalihu/worldcup22.git"
+  },
+  "author": "abi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abitsalihu/worldcup22/issues"
+  },
+  "homepage": "https://github.com/abitsalihu/worldcup22#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
