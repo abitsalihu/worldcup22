@@ -14,10 +14,7 @@ $start-btn-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
 
 @font-face {
   font-family: "CustomFont";
-  src: url("fonts/qatar");
-  src: url("https://yoursite.com/css/fonts/CustomFont.woff") format("woff"),
-    url("https://yoursite.com/css/fonts/CustomFont.otf") format("opentype"),
-    url("https://yoursite.com/css/fonts/CustomFont.svg#filename") format("svg");
+  src: ("fonts/qatar.ttf");
 }
 
 *,
@@ -34,6 +31,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
+
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   width: 100vw;

@@ -1,7 +1,6 @@
 @font-face {
   font-family: "CustomFont";
-  src: url("fonts/qatar");
-  src: url("https://yoursite.com/css/fonts/CustomFont.woff") format("woff"), url("https://yoursite.com/css/fonts/CustomFont.otf") format("opentype"), url("https://yoursite.com/css/fonts/CustomFont.svg#filename") format("svg"); }
+  src: "fonts/qatar.ttf"; }
 
 *,
 *::before,
