@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("fonts/qatar");
+  src: url("https://yoursite.com/css/fonts/CustomFont.woff") format("woff"), url("https://yoursite.com/css/fonts/CustomFont.otf") format("opentype"), url("https://yoursite.com/css/fonts/CustomFont.svg#filename") format("svg"); }
+
 *,
 *::before,
 *::after {
@@ -15,7 +20,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden; }
 
 img,
@@ -47,62 +52,267 @@ h6 {
 
 .con {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  gap: 80px;
   align-items: center;
   background-color: #cec1b0;
-  background: #393e46; }
+  background: #ffffff; }
+  .con__flags {
+    border-bottom: 1.5px solid #22c1c3;
+    width: 260px;
+    height: 230px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    overflow: hidden;
+    opacity: 0;
+    animation: flag 2s ease forwards;
+    transform: all ease; }
+    .con__flags > img {
+      width: 50px; }
   .con__card {
-    width: 800px;
-    height: 400px;
-    background: #5c928f;
-    background: linear-gradient(3deg, #5c928f 0%, #cec1b0 94%);
+    width: 40rem;
+    height: 600px;
+    background: #22c1c3;
+    background: linear-gradient(0deg, #22c1c3 0%, #fdbb2d 100%);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: visible; }
+    transform-origin: bottom;
+    opacity: 0;
+    animation: opacity 1s ease forwards 1s; }
+    .con__card-text {
+      text-align: center;
+      color: #ffffff;
+      align-self: baseline;
+      margin-top: 20px;
+      overflow: hidden;
+      font-size: 2.3rem;
+      height: 110px; }
+      .con__card-text > h2,
+      .con__card-text > h3 {
+        opacity: 0;
+        animation: text 1.5s ease forwards 1s; }
     .con__card-cup {
       margin-top: -150px;
-      width: 300px;
-      position: relative;
-      display: none; }
+      width: 365px;
+      bottom: -90px;
+      position: absolute;
+      z-index: 11;
+      opacity: 0;
+      animation: opacity 1s ease forwards 2.4s; }
+      .con__card-cup > img {
+        position: relative;
+        z-index: 999; }
+      .con__card-cup--overlay-cup {
+        width: 73px;
+        height: 104px;
+        position: absolute;
+        border-radius: 100%;
+        background: #393e46;
+        z-index: 1;
+        transform: rotate3d(1, 0, 0, 85deg);
+        bottom: -37.5px;
+        left: 150px; }
     .con__card-player {
       position: absolute; }
       .con__card-player--messi {
-        width: 400px;
+        width: 17rem;
         bottom: 0;
-        right: 150px; }
+        right: -20px;
+        z-index: 6;
+        opacity: 0;
+        animation: opacity 1s ease forwards 2.8s; }
       .con__card-player--ronaldo {
-        width: 600px;
-        bottom: -185px;
-        left: 10px;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%); }
-      .con__card-player--maradona {
-        width: 130px;
-        top: 30px; }
-      .con__card-player--neymar {
-        width: 350px;
-        bottom: -197px;
-        right: -100px;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%); }
-      .con__card-player--mbappe {
-        width: 450px;
-        left: -100px;
-        bottom: 0; }
-      .con__card-player--kane {
-        width: 325px;
+        width: 30rem;
         bottom: 0px;
-        right: 40px; }
+        left: -100px;
+        z-index: 5;
+        opacity: 0;
+        animation: opacity 1s ease forwards 3.2s; }
+      .con__card-player--maradona {
+        width: 180px;
+        top: 130px;
+        z-index: 4;
+        opacity: 0;
+        animation: opacity 3s ease forwards 6.8s; }
+      .con__card-player--neymar {
+        width: 24rem;
+        bottom: 78px;
+        right: -84px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%);
+        z-index: 5;
+        opacity: 0;
+        animation: opacity 1s ease forwards 3.8s; }
+      .con__card-player--mbappe {
+        width: 40rem;
+        left: -77.5px;
+        bottom: 100;
+        z-index: 3;
+        opacity: 0;
+        animation: opacity 1s ease forwards 4.2s; }
+      .con__card-player--kane {
+        width: 20rem;
+        bottom: 20px;
+        left: 30px;
+        opacity: 0;
+        animation: opacity 1s ease forwards 5.8s; }
+      .con__card-player--ochoa {
+        width: 25rem;
+        bottom: 300px;
+        right: -80px;
+        opacity: 0;
+        animation: opacity 1s ease forwards 4.6s; }
+      .con__card-player--neuer {
+        width: 25rem;
+        bottom: 300px;
+        left: -30px;
+        opacity: 0;
+        animation: opacity 1s ease forwards 5s; }
+      .con__card-player--eriksen {
+        width: 25rem;
+        bottom: 00px;
+        right: 42px;
+        opacity: 0;
+        animation: opacity 1s ease forwards 5.4s; }
+      .con__card-player--xhaka {
+        width: 25rem;
+        bottom: 70px;
+        left: 60px;
+        opacity: 0;
+        animation: opacity 1s ease forwards 6.2s; }
 
 .overlay {
   width: 100%;
-  height: 100%;
+  height: 20%;
   background: #5c928f;
-  background: linear-gradient(3deg, #5c928f 0%, transparent);
-  opacity: 0.4;
+  background: linear-gradient(3deg, #8cbf90 30%, transparent 50%);
+  opacity: 1;
   position: absolute;
-  bottom: 0;
-  border: 1px solid red;
+  bottom: 00px;
   overflow-y: hidden; }
+
+.overlay-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #e5e6af;
+  opacity: 0.2;
+  z-index: 10;
+  display: none; }
+
+.hide-right {
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  background: #ffffff;
+  bottom: 0;
+  right: -40px;
+  z-index: 50; }
+
+.hide-left {
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  background: #ffffff;
+  bottom: 0;
+  left: -100px;
+  z-index: 50; }
+
+.player-overlay {
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  background-color: #60c0aa;
+  opacity: 0.1;
+  top: 0;
+  display: none; }
+
+.card-overlay {
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  bottom: 0px;
+  background: linear-gradient(0.1deg, #32c0be 10%, transparent);
+  opacity: 1;
+  z-index: 10; }
+
+.flagOne {
+  animation: flagOne 1s ease forwards; }
+
+.flagTwo {
+  animation: flagTwo 1s ease forwards; }
+
+@keyframes flagOne {
+  0% {
+    opacity: 0;
+    transform: translateX(-1200px); }
+  50% {
+    opacity: 1; }
+  75% {
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
+@keyframes flagTwo {
+  0% {
+    opacity: 0;
+    transform: translateX(1200px); }
+  50% {
+    opacity: 1; }
+  75% {
+    transform: translateX(-30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px); }
+  50% {
+    opacity: 1; }
+  75% {
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes card {
+  0% {
+    transform: scaleY(0); }
+  100% {
+    transform: scaleY(1); } }
+
+@media screen and (max-width: 1022px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .con {
+    flex-direction: column;
+    gap: 30px; }
+    .con__flags:nth-child(1) {
+      margin-top: 20px;
+      margin-bottom: -100px; }
+    .con__flags:nth-child(3) {
+      margin-top: 100px;
+      margin-bottom: 20px; }
+    .con__card {
+      transform: scale(0.7);
+      margin-top: -30px;
+      margin-bottom: -20px; } }
+
+@media screen and (max-width: 530px) {
+  .con__card {
+    transform: scale(0.65); } }
