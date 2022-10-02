@@ -113,13 +113,8 @@ h6 {
     align-items: center;
     transform-origin: bottom;
     opacity: 0;
-    // transform: scaleY(0);
-    animation: opacity 1s ease forwards 1s;
-    // opacity: 0;
 
-    // overflow-y: hidden;
-    // overflow-x: visible;
-    // overflow-x: hidden;
+    animation: opacity 1s ease forwards 1s;
 
     &-text {
       text-align: center;
